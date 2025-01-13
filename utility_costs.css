@@ -1,0 +1,9 @@
+@import url('base.css');
+
+.container {
+    border-top: 5px solid #17a2b8;
+}
+
+table th {
+    background-color: #17a2b8;
+}

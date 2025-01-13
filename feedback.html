@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reclamații și Feedback</title>
+    <link rel="stylesheet" href="feedback.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Reclamații și Feedback</h2>
+        <form id="feedbackForm" onsubmit="return submitFeedback()">
+            <label for="type">Tipul mesajului:</label>
+            <select id="type" name="type" required>
+                <option value="reclamatie">Reclamație</option>
+                <option value="feedback">Feedback</option>
+            </select>
+
+            <label for="message">Mesaj:</label>
+            <textarea id="message" name="message" placeholder="Descrie problema sau oferă feedback..." required></textarea>
+
+            <button type="submit">Trimite</button>
+        </form>
+
+        <!-- Buton pentru istoricul reclamațiilor -->
+        <button onclick="showFeedbackHistory()">Arată Istoric</button>
+
+        <!-- Pop-up pentru afișarea istoricului -->
+        <div id="feedbackHistoryModal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span class="close-button" onclick="closeFeedbackHistory()">&times;</span>
+                <h3>Istoric Reclamații și Feedback</h3>
+                <ul id="feedbackHistoryList">
+                    <!-- Istoricul este generat dinamic -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="feedback.js"></script>
+</body>
+</html>

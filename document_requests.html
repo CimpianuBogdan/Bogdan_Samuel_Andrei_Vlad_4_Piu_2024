@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitare documente</title>
+    <link rel="stylesheet" href="document_requests.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Solicitare documente</h2>
+        <p>Selectează documentul pe care dorești să îl descarci.</p>
+
+        <button onclick="downloadDocument('contract')">Descarcă Contract</button>
+        <button onclick="downloadDocument('raport')">Descarcă Raport Financiar</button>
+
+        <p id="downloadMessage" style="display: none;">Documentul a fost descărcat cu succes.</p>
+        <button id="backButton" onclick="window.location.href='login1.html'">Înapoi la pagina principală</button>
+    </div>
+
+    <script src="document_requests.js"></script>
+</body>
+</html>

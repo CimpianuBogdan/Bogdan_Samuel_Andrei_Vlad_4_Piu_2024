@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualizare date personale</title>
+    <link rel="stylesheet" href="personal_data_update.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Actualizare date personale</h2>
+        <p>Completează acest formular pentru a actualiza informațiile personale.</p>
+
+        <form id="updateForm" onsubmit="return updateData()">
+            <label for="email">Adresa de e-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Introduceți noua adresă de e-mail" required>
+
+            <label for="phone">Număr de telefon:</label>
+            <input type="text" id="phone" name="phone" placeholder="Introduceți noul număr de telefon" required>
+
+            <label for="idProof">Document de identitate (opțional):</label>
+            <input type="file" id="idProof" name="idProof" accept="image/*">
+
+            <button type="submit">Actualizează datele</button>
+        </form>
+
+        <!-- Mesajul de succes care va apărea după trimitere -->
+        <p id="updateMessage" style="display: none; color: green; font-weight: bold;">Datele au fost actualizate cu succes!</p>
+        <button id="backButton" onclick="window.location.href='index.html'" style="display: none;">Înapoi la pagina principală</button>
+    </div>
+
+    <script src="personal_data_update.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestionarea parcărilor</title>
+    <link rel="stylesheet" href="parking_management.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Gestionarea parcărilor</h2>
+        <p>Alege un loc de parcare disponibil pentru a-l rezerva.</p>
+        
+        <form action="#" method="post">
+            <label for="parking_spot">Loc de parcare:</label>
+            <select id="parking_spot" name="parking_spot">
+                <option value="1">Locul 1</option>
+                <option value="2">Locul 2</option>
+                <option value="3">Locul 3</option>
+                <!-- Alte locuri de parcare -->
+            </select>
+
+            <button type="submit">Rezervă locul de parcare</button>
+        </form>
+
+        <button class="back-button" onclick="window.history.back()">Înapoi</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalii Proprietar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Modificări pentru Proprietar</h2>
+        <p id="owner-name">Proprietar</p>
+
+        <h3>Istoricul Modificărilor</h3>
+        <ul id="modification-list">
+            <!-- Lista de modificări pentru acest proprietar -->
+            <li>01/11/2023 - Plata întreținerii - 100 RON</li>
+            <li>02/11/2023 - Raportare problemă - țeavă spartă</li>
+            <!-- Alte modificări -->
+        </ul>
+
+        <button onclick="window.history.back()">Înapoi</button>
+    </div>
+
+    <script>
+        // Script pentru preluarea detaliilor în funcție de parametru
+        document.addEventListener("DOMContentLoaded", () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const ownerId = urlParams.get("ownerId");
+            const ownerName = `Proprietar ${ownerId}`;
+            document.getElementById("owner-name").innerText = ownerName;
+        });
+    </script>
+</body>
+</html>

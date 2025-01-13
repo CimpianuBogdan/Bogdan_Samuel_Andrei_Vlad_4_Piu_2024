@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestiunea Asociației de Proprietari</title>
+    <link rel="stylesheet" href="styles.css">
+    <button onclick="toggleDarkMode()">Mod Noapte</button>
+</head>
+<body>
+    <div class="container">
+        <h1>Gestiunea Asociației de Proprietari</h1>
+        <button onclick="startTutorial()">Ghid pentru Începători</button>
+
+        <!-- Pop-up Tutorial -->
+        <div id="tutorial-modal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <h2>Tutorial</h2>
+                <p id="tutorial-text">Bine ai venit! Acesta este meniul principal.</p>
+                <button onclick="nextStep()">Următorul</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Prima coloană -->
+            <div class="column">
+                <div class="card" onclick="toggleDropdown('intretinere')">
+                    <h2>Plata întreținerii</h2>
+                    <span class="tooltip-text">Aici poți vizualiza și efectua plata pentru întreținere.</span>
+                    <div id="intretinere" class="dropdown">
+                        <p onclick="openSubsection('Plata întreținerii', 'Aici poți efectua plata întreținerii pentru luna curentă.', 'maintenance_payment.html')">Plata întreținerii</p>
+                        <p onclick="openSubsection('Istoricul plăților', 'Aici poți vizualiza istoricul plăților efectuate.', 'payment_history.html')">Istoricul plăților</p>
+                    </div>
+                </div>
+
+                <div class="card" onclick="toggleDropdown('probleme')">
+                    <h2>Raportarea problemelor tehnice</h2>
+                    <div id="probleme" class="dropdown">
+                        <p onclick="openSubsection('Probleme tehnice', 'Raportează problemele tehnice întâmpinate în clădire.', 'technical_issues.html')">Probleme tehnice</p>
+                        <p onclick="openSubsection('Reclamații și feedback', 'Oferă feedback sau raportează o problemă administrației.', 'feedback.html')">Reclamații și feedback</p>
+                    </div>
+                </div>
+
+                <div class="card" onclick="toggleDropdown('rezervari')">
+                    <h2>Rezervarea spațiilor comune</h2>
+                    <div id="rezervari" class="dropdown">
+                        <p onclick="openSubsection('Rezervarea spațiilor', 'Rezervă spațiile comune pentru evenimente personale.', 'reservations.html')">Rezervarea spațiilor</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- A doua coloană -->
+            <div class="column">
+                <div class="card" onclick="toggleDropdown('anunturi')">
+                    <h2>Anunțuri și notificări</h2>
+                    <div id="anunturi" class="dropdown">
+                        <p onclick="openSubsection('Anunțuri', 'Verifică anunțurile importante de la administrație.', 'announcements.html')">Anunțuri</p>
+                        <p onclick="openSubsection('Rapoarte lunare', 'Vizualizează rapoartele lunare ale activităților.', 'monthly_reports.html')">Rapoarte lunare</p>
+                    </div>
+                </div>
+
+                <div class="card" onclick="toggleDropdown('parcari')">
+                    <h2>Gestionarea parcărilor și utilităților</h2>
+                    <div id="parcari" class="dropdown">
+                        <p onclick="openSubsection('Gestionarea parcărilor', 'Gestionează locurile de parcare disponibile.', 'parking_management.html')">Gestionarea parcărilor</p>
+                        <p onclick="openSubsection('Costuri utilități', 'Află detalii despre costurile utilităților.', 'utility_costs.html')">Costuri utilități</p>
+                    </div>
+                </div>
+
+                <div class="card" onclick="toggleDropdown('documente')">
+                    <h2>Documente și date personale</h2>
+                    <div id="documente" class="dropdown">
+                        <p onclick="openSubsection('Solicitare documente', 'Solicită documente administrative necesare.', 'document_requests.html')">Solicitare documente</p>
+                        <p onclick="openSubsection('Actualizare date personale', 'Actualizează-ți informațiile personale în sistem.', 'personal_data_update.html')">Actualizare date personale</p>
+                        <p onclick="openSubsection('Voturi și decizii', 'Participă la voturi și decizii administrative.', 'votes_decisions.html')">Voturi și decizii</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Zona de detalii pentru fiecare subsecțiune ca pop-up modal -->
+    <div id="subsection-details" class="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <h2 id="subsection-title"></h2>
+            <p id="subsection-content"></p>
+            <button class="access-button" id="access-page-button">Accesează pagina</button>
+        </div>
+    </div>
+
+    <div id="admin-section" style="display: none;">
+        <h2>Lista Proprietari</h2>
+        <ul id="owner-list">
+            <!-- Fiecare proprietar este un link către pagina sa de detalii -->
+            <li><a href="owner_details.html?ownerId=1">Proprietar 1</a></li>
+            <li><a href="owner_details.html?ownerId=2">Proprietar 2</a></li>
+            <li><a href="owner_details.html?ownerId=3">Proprietar 3</a></li>
+            <!-- Continuă lista cu toți proprietarii -->
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="login1.js"></script>
+</body>
+</html>

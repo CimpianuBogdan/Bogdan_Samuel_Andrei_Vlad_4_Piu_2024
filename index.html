@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autentificare</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Autentificare</h2>
+        <form id="loginForm" onsubmit="return handleLogin()">
+            <label for="username">Nume de utilizator:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Parolă:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Conectează-te</button>
+        </form>
+        <p id="error-message" class="error-message" style="display: none;">Nume de utilizator sau parolă incorectă</p>
+    </div>
+    
+    <script src="index.js"></script>
+</body>
+</html>

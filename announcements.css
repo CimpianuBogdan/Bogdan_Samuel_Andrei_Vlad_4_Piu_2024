@@ -1,0 +1,11 @@
+@import url('base.css');
+
+.container {
+    border-top: 5px solid #007bff;
+}
+
+ul li {
+    border-left: 5px solid #007bff;
+    font-size: 1.1rem;
+    font-weight: 500;
+}

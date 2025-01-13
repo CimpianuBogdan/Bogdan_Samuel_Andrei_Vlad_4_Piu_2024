@@ -1,0 +1,18 @@
+@import url('base.css');
+
+.container {
+    border-top: 5px solid #6c757d;
+}
+
+table th {
+    background-color: #6c757d;
+}
+
+table tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+table tr:nth-child(odd) {
+    background-color: #e9ecef;
+}
+

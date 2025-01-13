@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Istoricul plăților</title>
+    <link rel="stylesheet" href="payment_history.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Istoricul plăților</h2>
+        <p>Toate plățile efectuate sunt afișate mai jos:</p>
+
+        <table id="paymentTable">
+            <thead>
+                <tr>
+                    <th>Tip Utilitate</th>
+                    <th>Suma (RON)</th>
+                    <th>Data</th>
+                    <th>Metoda</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rândurile sunt generate din Local Storage -->
+            </tbody>
+        </table>
+
+        <button onclick="window.location.href='login1.html'">Înapoi la pagina principală</button>
+    </div>
+
+    <script src="payment_history.js"></script>
+</body>
+</html>

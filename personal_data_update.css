@@ -1,0 +1,14 @@
+@import url('base.css');
+
+.container {
+    border-top: 5px solid #ffc107;
+}
+
+input[type="text"],
+input[type="email"] {
+    background-color: #fff3cd;
+}
+
+button {
+    background-color: #ffc107;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rezervarea Spațiilor Comune</title>
+    <link rel="stylesheet" href="reservations.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Rezervarea Spațiilor Comune</h2>
+        <p>Selectează data pentru a vedea disponibilitatea și alege ora dorită.</p>
+
+        <!-- Formular pentru selectarea spațiului și datei -->
+        <form id="reservationForm" onsubmit="return makeReservation()">
+            <label for="space">Spațiul:</label>
+            <select id="space" name="space" required onchange="updateSchedule()">
+                <option value="">Selectează spațiul</option>
+                <option value="sala_evenimente">Sală de evenimente</option>
+                <option value="teren_sport">Teren de sport</option>
+            </select>
+
+            <label for="date">Data:</label>
+            <input type="date" id="date" name="date" required onchange="updateSchedule()">
+
+            <label for="time">Ora:</label>
+            <select id="time" name="time" required>
+                <option value="">Selectează o oră disponibilă</option>
+            </select>
+
+            <button type="submit">Rezervă</button>
+        </form>
+
+        <!-- Tabel pentru afișarea disponibilității -->
+        <h3>Orarul spațiului selectat</h3>
+        <table id="scheduleTable">
+            <thead>
+                <tr>
+                    <th>Ora</th>
+                    <th>Disponibilitate</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Conținut generat din JavaScript -->
+            </tbody>
+        </table>
+        <button onclick="window.location.href='index.html'">Înapoi la pagina principală</button>
+    </div>
+
+    <script src="reservations.js"></script>
+</body>
+</html>
